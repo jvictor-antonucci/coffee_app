@@ -51,4 +51,19 @@ class CoffeeApiClient implements ICoffeeApi {
       throw SaveCoffeeImageFailure();
     }
   }
+
+  @override
+  Future<String?> coffeeImageIsFavorite({required String imageName}) async {
+    return _storage.imageExists(imageName);
+  }
+
+  @override
+  Future<bool> deleteCoffeeImage({required String imagePath}) {
+    return _storage.deleteImage(imagePath);
+  }
+
+  @override
+  Future<List<String>> listAllCoffeeImages() async {
+    return _storage.allImages;
+  }
 }

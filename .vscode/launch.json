@@ -1,0 +1,85 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "coffee_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "coffee_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "coffee_app (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "coffee_api",
+            "cwd": "modules/coffee_api",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "coffee_api (profile mode)",
+            "cwd": "modules/coffee_api",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "coffee_api (release mode)",
+            "cwd": "modules/coffee_api",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "dependencies",
+            "cwd": "modules/dependencies",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dependencies (profile mode)",
+            "cwd": "modules/dependencies",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "dependencies (release mode)",
+            "cwd": "modules/dependencies",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "image_storage",
+            "cwd": "modules/image_storage",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "image_storage (profile mode)",
+            "cwd": "modules/image_storage",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "image_storage (release mode)",
+            "cwd": "modules/image_storage",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

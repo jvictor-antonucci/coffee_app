@@ -3,7 +3,7 @@
 export "FLUTTER_ROOT=/Users/joaovictorasardinha/flutter"
 export "FLUTTER_APPLICATION_PATH=/Users/joaovictorasardinha/Documents/GitHub/coffee_app"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=/Users/joaovictorasardinha/Documents/GitHub/coffee_app/lib/main.dart"
+export "FLUTTER_TARGET=/Users/joaovictorasardinha/Documents/GitHub/coffee_app/scripts/get_packages.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
