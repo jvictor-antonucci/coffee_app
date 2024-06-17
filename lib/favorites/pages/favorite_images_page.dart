@@ -52,7 +52,7 @@ class _FavoriteImagesPageState extends State<FavoriteImagesPage> {
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: Text(
-                    'It was not possible to fetch the image\n Try again requesting another one!',
+                    'There is no favorite image\n Try to hit the favorite button!',
                     maxLines: 2,
                     style: TextStyle(
                       fontSize: 18,
