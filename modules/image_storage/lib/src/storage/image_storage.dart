@@ -12,7 +12,8 @@ class ImageStorage implements IImageStorage {
 
   @override
   Future<List<String>> get allImages async {
-    final directory = Directory(await _localPath);
+    final localPath = await _localPath;
+    final directory = Directory(localPath);
     if (!(await directory.exists())) return [];
 
     final imageFiles = directory.listSync(
@@ -23,16 +24,38 @@ class ImageStorage implements IImageStorage {
   }
 
   @override
-  Future<String> getImagePath(String imageName) async {
-    return '';
+  Future<String> storeImage(Uint8List image, String imageName) async {
+    final localPath = await _localPath;
+    await Directory(localPath).create(recursive: true);
+    final File imageFile = File('$localPath/${imageName.split('.')[0]}.webp');
+    final Uint8List imageCompressedToWebP = await FlutterImageCompress.compressWithList(
+      image,
+      quality: 96,
+      format: CompressFormat.webp,
+    );
+
+    imageFile.writeAsBytesSync(imageCompressedToWebP);
+
+    return imageFile.path;
   }
 
   @override
-  Future<String> storeImage(Uint8List image, String imageName) async {
-    await Directory(await _localPath).create(recursive: true);
-    final File imageFile = File(imageName);
-    imageFile.writeAsBytesSync(image);
+  Future<String?> imageExists(String imageName) async {
+    final localPath = await _localPath;
+    final imagePath = '$localPath/$imageName';
+    final images = await allImages;
 
-    return imageFile.path;
+    if (images.contains(imagePath)) return imagePath;
+    return null;
+  }
+
+  @override
+  Future<bool> deleteImage(String imagePath) async {
+    try {
+      await File(imagePath).delete(recursive: true);
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
 }

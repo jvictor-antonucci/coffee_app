@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:coffee_api/coffee_api.dart';
 import 'package:coffee_api/src/errors/failures.dart';
 import 'package:dependencies/dependencies.dart';
