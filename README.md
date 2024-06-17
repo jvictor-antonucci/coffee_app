@@ -1,16 +1,16 @@
 # coffe_app
 
-A new Flutter project.
+Flutter app that request random coffee images from the coffee.alexflipnote.dev api and allows user to favorite them and store it locally on their mobile device.
 
-## Getting Started
+## External Packages
 
-This project is a starting point for a Flutter application.
+- BLoC and Flutter_BLoC packages for the view controllers
+- Http for the http client
+- Path_Provider to help getting the local path to store the images
+- Flutter_Image_Compress to compress the images to WebP for a better manage of memory
 
-A few resources to get you started if this is your first Flutter project:
+## Instructions
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**First Step:** open the terminal and run `make get-packages` or run `dart run scripts/get_packages.dart` from the root of the project to install all the packages via flutter pub get.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Second Step:** run the project with `flutter run` or with your IDE's visual interface. 
